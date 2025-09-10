@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Retro Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sunset-orange: #ff7b29;
+      --mustard: #d4a373;
+      --tan: #f5f1e6;
+      --warm-pink: #ff6fa8;
+      --lavender: #9b6bcb;
+      --aqua-blue: #5ec8e5;
+      --dark-text: #3b2c20;
+    }
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Raleway',sans-serif; background-color:var(--tan); color:var(--dark-text); line-height:1.6;}
+    header {background: var(--sunset-orange); color:white; padding:3rem 2rem; text-align:center; position:relative;}
+    header h1 {font-family:'Shrikhand',cursive; font-size:3.5rem; margin-bottom:0.5rem;}
+    nav {margin-top:1rem; display:flex; justify-content:center; gap:2rem;}
+    nav a {color:white; text-decoration:none; font-weight:bold; font-size:1rem; transition:border-bottom 0.3s; border-bottom:1px solid transparent;}
+    nav a:hover{border-bottom:1px solid var(--warm-pink);}
+    section {max-width:1000px; margin:4rem auto; padding:0 1rem; display:grid; grid-template-columns:1fr 1fr; gap:2rem;}
+    section:nth-child(even) {background:var(--warm-pink); color:white; padding:3rem; border-radius:15px;}
+    section:nth-child(odd) {background:var(--aqua-blue); color:white; padding:3rem; border-radius:15px;}
+    section h2{font-family:'Shrikhand',cursive; font-size:2.5rem; margin-bottom:1rem;}
+    .placeholder{background: rgba(255,255,255,0.3); border-radius:12px; height:250px; display:flex; justify-content:center; align-items:center; font-weight:bold;}
+    footer{text-align:center; padding:3rem 1rem; background:var(--sunset-orange); color:white;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="work.html">My Work</a>
+    </nav>
+  </header>
+
+  <section>
+    <div>
+      <h2>Who I Am</h2>
+      <p>I’m a creative soul with a passion for retro aesthetics and modern design. I blend vibrant colors and playful layouts with a modern editorial feel.</p>
+    </div>
+    <div class="placeholder">Your Photo/Video</div>
+  </section>
+
+  <section>
+    <div class="placeholder">Fun Fact / Collage</div>
+    <div>
+      <h2>Fun Facts</h2>
+      <p>I love groovy 70s fonts, sunset gradients, and bringing energy into everything I do. My work reflects a love for bold visuals and seamless user experiences.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Retro Portfolio</p>
+  </footer>
+</body>
+</html>
