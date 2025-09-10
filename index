@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Retro Portfolio - Home</title>
+  <!-- Google Fonts: Retro, thick stroke -->
+  <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Shrikhand&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sunset-orange: #ff7b29;
+      --mustard: #d4a373;
+      --tan: #f5f1e6;
+      --warm-pink: #ff6fa8;
+      --lavender: #9b6bcb;
+      --aqua-blue: #5ec8e5;
+      --dark-text: #3b2c20;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body { font-family: 'Raleway', sans-serif; background-color: var(--tan); color: var(--dark-text); line-height:1.6; overflow-x:hidden; }
+
+    /* Fixed nav at top */
+    nav { position:fixed; top:1rem; left:50%; transform:translateX(-50%); display:flex; gap:2rem; background: rgba(255,255,255,0.15); padding:0.6rem 1.5rem; border-radius:40px; backdrop-filter: blur(6px); z-index:100; }
+    nav a { text-decoration:none; color:white; font-weight:bold; font-size:0.9rem; border-bottom:1px solid transparent; transition:border-color 0.3s; }
+    nav a:hover { border-color: var(--warm-pink); }
+
+    header { background: radial-gradient(circle at center, var(--sunset-orange), #ff5200); color:white; padding:6rem 2rem 4rem; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:space-between; }
+
+    /* Heading to right */
+    header h1 { font-family: 'Faster One', cursive; font-size:5rem; margin:0 2rem 0 0; }
+    header p { font-size:1.3rem; margin-right:2rem; }
+
+    /* Supergraphics on left */
+    .supergraphics { position:absolute; left:2rem; top:50%; transform:translateY(-50%); font-size:8rem; color:rgba(255,255,255,0.15); font-weight:bold; pointer-events:none; }
+
+    section { max-width:1200px; margin:6rem auto; padding:0 1.5rem; position:relative; }
+    h2 { font-family:'Shrikhand', cursive; font-size:2.8rem; margin-bottom:2rem; color:var(--sunset-orange); position:relative; }
+
+    .color-block { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:2rem; margin-bottom:4rem; padding:3rem; border-radius:20px; color:white; position:relative; }
+    .color-block:nth-child(even) { background: var(--warm-pink); }
+    .color-block:nth-child(odd) { background: var(--aqua-blue); }
+    .color-block img, .color-block .placeholder { width:100%; height:250px; object-fit:cover; border-radius:12px; background: rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:bold; }
+    .color-block h3 { font-family:'Shrikhand', cursive; font-size:2rem; margin-bottom:1rem; }
+    .color-block p { font-size:1.1rem; line-height:1.6; }
+
+    /* Animated thin supergraphics border */
+    .super-border { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; stroke:rgba(255,255,255,0.2); stroke-width:1; fill:none; }
+
+    footer { text-align:center; padding:3rem 1rem; background: var(--sunset-orange); color:white; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="supergraphics">★ ✦</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="work.html">My Work</a>
+    </nav>
+    <div>
+      <h1>My Retro Portfolio</h1>
+      <p>A groovy collection of my work & story</p>
+    </div>
+  </header>
+
+  <section class="animate">
+    <div class="color-block">
+      <svg class="super-border"><rect x="0" y="0" width="100%" height="100%" stroke-dasharray="5,5" /></svg>
+      <div>
+        <h2>About Me</h2>
+        <p>Welcome! I'm a creative soul with a love for retro aesthetics and modern design. This portfolio blends the two worlds, showing off my projects and journey.</p>
+      </div>
+      <div class="placeholder">Image/Video</div>
+    </div>
+  </section>
+
+  <section class="animate">
+    <div class="color-block">
+      <svg class="super-border"><rect x="0" y="0" width="100%" height="100%" stroke-dasharray="5,5" /></svg>
+      <div class="placeholder">Resume Snapshot</div>
+      <div>
+        <h2>Resume</h2>
+        <p>You can <a href="#" style="color:white;text-decoration:underline;">download my resume here</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="animate">
+    <div class="color-block">
+      <svg class="super-border"><rect x="0" y="0" width="100%" height="100%" stroke-dasharray="5,5" /></svg>
+      <div>
+        <h2>My Work</h2>
+        <p>Check out some of my featured projects. Click through to see details, visuals, and what went into creating them.</p>
+      </div>
+      <div class="placeholder">Project Gallery</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Retro Portfolio</p>
+  </footer>
+
+  <script>
+    // Section fade-in animation
+    const sections = document.querySelectorAll('.animate');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if(boxTop < triggerBottom){ section.style.opacity='1'; section.style.transform='translateY(0)'; }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // Animate super-border on scroll
+    const borders = document.querySelectorAll('.super-border rect');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      borders.forEach(rect => {
+        rect.style.strokeDashoffset = scrollTop * 0.5;
+      });
+    });
+  </script>
+</body>
+</html>
