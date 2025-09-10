@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Work - Retro Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sunset-orange: #ff7b29;
+      --mustard: #d4a373;
+      --tan: #f5f1e6;
+      --warm-pink: #ff6fa8;
+      --lavender: #9b6bcb;
+      --aqua-blue: #5ec8e5;
+      --dark-text: #3b2c20;
+    }
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Raleway',sans-serif; background:var(--tan); color:var(--dark-text); line-height:1.6;}
+    header {background: var(--lavender); color:white; padding:3rem 2rem; text-align:center; position:relative;}
+    header h1 {font-family:'Shrikhand',cursive; font-size:3.5rem; margin-bottom:0.5rem;}
+    nav {margin-top:1rem; display:flex; justify-content:center; gap:2rem;}
+    nav a {color:white; text-decoration:none; font-weight:bold; font-size:1rem; transition:border-bottom 0.3s; border-bottom:1px solid transparent;}
+    nav a:hover{border-bottom:1px solid var(--warm-pink);}
+
+    .grid-container {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; max-width:1200px; margin:4rem auto; padding:0 1rem;}
+    .project-card {background:white; border-radius:15px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s;}
+    .project-card:hover {transform:translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+    .project-image {height:200px; background: rgba(255, 123, 41, 0.3); display:flex; justify-content:center; align-items:center; font-weight:bold;}
+    .project-content {padding:1rem;}
+    .project-content h3 {font-family:'Shrikhand',cursive; font-size:1.8rem; color:var(--sunset-orange); margin-bottom:0.5rem;}
+    .project-content p {font-size:1rem;}
+
+    footer{text-align:center; padding:3rem 1rem; background: var(--sunset-orange); color:white;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Work</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="work.html">My Work</a>
+    </nav>
+  </header>
+
+  <div class="grid-container">
+    <div class="project-card">
+      <div class="project-image">Project 1</div>
+      <div class="project-content">
+        <h3>Project One</h3>
+        <p>Short description of project, tools used, and main achievements.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image">Project 2</div>
+      <div class="project-content">
+        <h3>Project Two</h3>
+        <p>Short description of project, tools used, and main achievements.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image">Project 3</div>
+      <div class="project-content">
+        <h3>Project Three</h3>
+        <p>Short description of project, tools used, and main achievements.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-image">Project 4</div>
+      <div class="project-content">
+        <h3>Project Four</h3>
+        <p>Short description of project, tools used, and main achievements.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Retro Portfolio</p>
+  </footer>
+</body>
+</html>
